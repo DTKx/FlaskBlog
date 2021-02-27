@@ -28,8 +28,8 @@ db.session.add(post_2)
 db.session.commit()
 print(user_c.posts)
 for post in user_c.posts:
-    print(user_c.title)
+    print(post.title)
 post_c=Post.query.first()
 print(post_c.user_id)
 print(post_c.author)#Works given backref
-# db.drop_all()#Drops all data so far
+db.drop_all()#Drops all data so far
