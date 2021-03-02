@@ -1,11 +1,24 @@
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+from flask_login import UserMixin
+from flaskblog import db,login_manager
 
-from flaskblog import db#Cleaner
+@login_manager.user_loader
 
+def load_user(user_id):
+    """Manages Login
+
+    Args:
+        user_id ([type]): [description]
+
+    Returns:
+        [type]: [description]
+    """
+
+    return User.query.get(int(user_id))
 
 # Creates user models
-class User(db.Model):
+class User(db.Model,UserMixin):
     # Creates Columns of our database
     id=db.Column(db.Integer,primary_key=True)
     username=db.Column(db.String(20),unique=True,nullable=False)#nullable, means we need to have one
