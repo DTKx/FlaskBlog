@@ -33,4 +33,16 @@ dependencies:
   - wheel=0.36.2=pyhd3eb1b0_0
   - wincertstore=0.2=py38_0
   - zlib=1.2.11=h62dcd97_4
-prefix: C:\Users\Debora\anaconda3\envs\flask_blog
+  - pip:
+    - bcrypt==3.2.0
+    - cffi==1.14.5
+    - dnspython==2.1.0
+    - email-validator==1.1.2
+    - flask-bcrypt==0.7.1
+    - flask-login==0.5.0
+    - flask-sqlalchemy==2.5.1
+    - flask-wtf==0.14.3
+    - idna==3.1
+    - pycparser==2.20
+    - wtforms==2.3.3
+prefix: C:\Users\Debs\anaconda3\envs\flask_blog

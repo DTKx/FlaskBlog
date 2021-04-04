@@ -23,7 +23,7 @@
 
 # Part 5
 # Structure to Package
-
+import timeit
 from flaskblog import app
 
 if __name__ == "__main__":#This is only true if we run the script directly
